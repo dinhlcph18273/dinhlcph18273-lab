@@ -9,6 +9,7 @@ const DetailPage = {
                 <h1 class = "text-2xl mb-2 text-orange-500">${result.title}</h1>
                 <p>${result.desc}</p>
             </div>
+            <a href = "/">Back</a>
         `;
     },
 };
