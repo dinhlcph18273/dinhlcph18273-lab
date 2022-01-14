@@ -1,8 +1,10 @@
+import NavBarDas from "../../../components/Nav";
+
 const addPost = {
     print() {
         return /* html */ `
-       
-        <form class = "border border-black max-w-lg mt-2 mx-auto">
+        ${NavBarDas.print()}
+        <form class = "border border-black max-w-lg mt-2 mx-auto rounded">
             <h1 class = "text-center">Add Post</h1>
             <div class = "">
                 <div class = "">
@@ -30,6 +32,8 @@ const addPost = {
             <button type = "submit" class = "border rounded-md mt-5 px-5 py-2 text-sky-500">Tạo mới</button>
             </div>
         </form>
+       
+        <a href = "/admin/news" class = "text-red-500">Back</a>
         `;
     },
 };

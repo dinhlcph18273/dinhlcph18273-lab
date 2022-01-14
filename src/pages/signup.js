@@ -1,6 +1,11 @@
+import footer from "../components/footer";
+import header from "../components/header";
+
 const signup = {
     print() {
         return /* html */ `
+        <div class="max-w-5xl mx-auto">
+        ${header.print()}
         <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full space-y-8 border p-10 rounded-lg">
           <div>
@@ -49,6 +54,8 @@ const signup = {
             </div>
           </form>
         </div>
+      </div>
+      ${footer.print()}
       </div>
         
     `;
