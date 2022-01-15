@@ -1,9 +1,9 @@
-import AdminProductList from "../../../components/admin/produvtList";
 import NavBarDas from "../../../components/Nav";
+import { data } from "../../../data";
 
 const AdminNews = {
-    print() {
-        return /* html */ `
+        print() {
+            return /* html */ `
             <div class="min-h-full">
                 ${NavBarDas.print()}
                 <header class="bg-white shadow">
@@ -35,7 +35,32 @@ const AdminNews = {
                     <!-- Replace with your content -->
                     <div class="px-4 py-6 sm:px-0">
                     <div class="border-4 border-dashed border-gray-200 rounded-lg ">
-                        ${AdminProductList.print()}
+                    <table class = "box-border">
+                    <thead>
+                        <tr class = "border">
+                            <th class = "border">STT</th>
+                            <th class = "border">Tên</th>
+                            <th class = "border">Ảnh</th>
+                            <th class = "border">Mô tả</th>
+                            <th class = "border">Title</th>
+                        </tr>
+                    </thead>
+                ${data.map((list, index) => `     
+                <tbody>
+                    <tr class = "border">
+                        <td class = "border text-center">${index + 1}</td>
+                        <td class = "border text-center">${list.title}</td>
+                        <td class = "border text-center"><img class = "w-1/2 h-1/2 mx-auto" src="${list.img}" alt=""></td>
+                        <td class = "border">${list.desc}</td>
+                        <td class = "border text-center">
+                            <a class = "text-blue-500 " href="/admin/news/${list.id}/edit">Edit</a>
+                            <button class="text-red-500">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+           
+                `).join(" ")}
+                </table>
                     </div>
                     </div>
                     <!-- /End replace -->

@@ -12,26 +12,20 @@ import AdminNews from "./pages/admin/news";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
-const render = (content) => {
-    document.querySelector("#app").innerHTML = content;
+const render = (content, id) => {
+    document.querySelector("#app").innerHTML = content.print(id);
 };
 router.on({
-    "/": () => render(Homepage.print()),
-    "/about": () => render(AboutPage.print()),
-    "/signin": () => render(signin.print()),
-    "/signup": () => render(signup.print()),
-    "/product": () => render(ProductPage.print()),
-    "/product/:id": ({ data }) => {
-        const { id } = data;
-        render(DetailPage.print(id));
-    },
-    "/admin/dashboard": () => render(dashboard.print()),
-    "/admin/news": () => render(AdminNews.print()),
-    "/admin/news/add": () => render(addPost.print()),
-    "/admin/news/:id/edit": ({ data }) => {
-        const { id } = data;
-        render(ProductEdit.print(id));
-    },
+    "/": () => render(Homepage),
+    "/about": () => render(AboutPage),
+    "/signin": () => render(signin),
+    "/signup": () => render(signup),
+    "/product": () => render(ProductPage),
+    "/product/:id": ({ data }) => render(DetailPage, data.id),
+    "/admin/dashboard": () => render(dashboard),
+    "/admin/news": () => render(AdminNews),
+    "/admin/news/add": () => render(addPost),
+    "/admin/news/:id/edit": ({ data }) => render(ProductEdit, data.id),
 
 });
 router.resolve();

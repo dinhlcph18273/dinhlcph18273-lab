@@ -10,22 +10,26 @@ const Homepage = {
     print() {
         return /* html */ `
         <div class="max-w-5xl mx-auto">
-                ${header.print()}
-                <div class="bg-sky-900 text-center py-4">
-                    ${logo.print()}
-                </div>
-                <ul class = "bg-orange-400 flex justify-between py-2">
-                    ${newMenus.print()}
-                </ul>   
-                <div class="banner">
-                    ${Banner.print()}
-                </div>
-                <div class="news mt-5">
+                <header>
+                    ${header.print()}
+                    <div class="bg-sky-900 text-center py-4">
+                        ${logo.print()}
+                    </div>
+                    <ul class = "bg-orange-400 flex justify-between py-2">
+                        ${newMenus.print()}
+                    </ul>   
+                    <div class="banner">
+                        ${Banner.print()}
+                    </div>
+                </header>
+               <main>
+                    <div class="news mt-5">
                     ${NewsList.print()}
-                </div>
-                <div class="news mt-5">
-                    ${NewsList1.print()}
-                </div>
+                    </div>
+                    <div class="news mt-5">
+                        ${NewsList1.print()}
+                    </div>
+               </main>
                 ${footer.print()}
         </div>
         `;
