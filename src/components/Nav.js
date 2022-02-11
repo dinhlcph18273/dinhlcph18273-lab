@@ -6,30 +6,32 @@ const NavBarDas = {
           <div class="flex items-center justify-between h-16">
             <div class="flex items-center">
               <div class="flex-shrink-0">
+              <a  href = "/#">
                 <img
-                  class="h-8 w-8"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                  class="w-20 h-30"
+                  src="https://upload.wikimedia.org/wikipedia/commons/2/20/FPT_Polytechnic.png"
                   alt="Workflow"
                 />
+              </a>
               </div>
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                   <a
-                    href="/admin/dashboard"
+                    href="/#/admin/dashboard"
                     class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                     aria-current="page"
                     >Dashboard</a
                   >
                   <a
-                    href="/admin/news"
+                    href="/#/admin/news"
                     class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >News</a
                   >
                   <a
-                    href="#"
+                    href="/#/admin/products"
                     class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >Projects</a
+                    >Products</a
                   >
                   <a
                     href="#"

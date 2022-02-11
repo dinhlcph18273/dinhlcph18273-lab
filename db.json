@@ -1,0 +1,159 @@
+{
+  "posts": [
+    {
+      "id": "8",
+      "title": "Tiffany Wisoky1",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644552497/pjmg52aq/kmgynyy5sh04u7cgitcy.jpg",
+      "desc": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support"
+    },
+    {
+      "createdAt": "2022-01-15T02:36:13.715Z",
+      "title": "Mr. Doug Purdy",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "The Football Is Good For Training And Recreational Purposes",
+      "id": "9"
+    },
+    {
+      "createdAt": "2022-01-14T12:38:27.738Z",
+      "title": "bài viết này được đổi",
+      "img": "http://placeimg.com/640/480/nature",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "id": "10"
+    },
+    {
+      "createdAt": "2022-01-14T17:58:26.446Z",
+      "title": "Vickie Jast",
+      "img": "http://placeimg.com/640/480/technics",
+      "desc": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "id": "11"
+    },
+    {
+      "createdAt": "2022-01-15T02:21:11.908Z",
+      "title": "Mrs. Drew Farrell",
+      "img": "http://placeimg.com/640/480/fashion",
+      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "id": "13"
+    },
+    {
+      "createdAt": "2022-01-14T11:14:02.843Z",
+      "title": "Lorena Cole",
+      "img": "http://placeimg.com/640/480/technics",
+      "desc": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+      "id": "14"
+    },
+    {
+      "createdAt": "2022-01-15T00:11:58.958Z",
+      "title": "Vừa sửa",
+      "img": "http://placeimg.com/640/480/technics",
+      "desc": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+      "id": "15"
+    },
+    {
+      "createdAt": "2022-01-15T04:39:49.775Z",
+      "title": "anh dep trai so 2 khong ai so 1",
+      "img": "http://placeimg.com/640/480/people",
+      "desc": "day la mo ta",
+      "id": "16"
+    },
+    {
+      "createdAt": "2022-01-10T20:33:27.477Z",
+      "title": "Yolanda Roob",
+      "img": "http://placeimg.com/640/480/sports",
+      "desc": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "id": "19"
+    },
+    {
+      "0": {
+        "createdAt": "2022-01-10T20:33:27.477Z",
+        "title": "Bài viết mới",
+        "img": "http://placeimg.com/640/480/sports",
+        "desc": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+        "id": "2"
+      },
+      "createdAt": "2022-01-18T23:32:25.238Z",
+      "title": "Bennie Moore",
+      "img": "http://placeimg.com/640/480/sports",
+      "desc": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+      "id": "21"
+    },
+    {
+      "createdAt": "2022-01-18T09:17:36.448Z",
+      "title": "David Beahan",
+      "img": "http://placeimg.com/640/480/cats",
+      "desc": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "id": "22"
+    },
+    {
+      "title": "bai viet",
+      "img": "https://res.cloudinary.com/dinhlcph18273/image/upload/v1644213767/pjmg52aq/s4b231fljzmmwl7ppccu.jpg",
+      "desc": "ok phet",
+      "id": "OVS1BCs"
+    }
+  ],
+  "products": [
+    {
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644295228/pjmg52aq/rolfgsc9ekcsun2rr5uc.jpg",
+      "price": 1,
+      "title": "iphone 12 pro max",
+      "status": "còn hàng",
+      "desc": "sản phẩm iphone 12 pro max hiện đang có giá chỉ 1 chiếc nịt",
+      "id": "55"
+    },
+    {
+      "id": "0nkFlfk",
+      "title": "Samsung A90 5G",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644295228/pjmg52aq/rolfgsc9ekcsun2rr5uc.jpg",
+      "price": "5.000.000",
+      "status": "Còn hàng",
+      "desc": "Điện thoại samsung dòng A có 5G đầu tiên của hãng"
+    },
+    {
+      "title": "Samsung A90 5G",
+      "img": "https://picsum.photos/200/200",
+      "price": "5.000.000",
+      "status": "Còn hàng",
+      "desc": "Điện thoại samsung dòng A có 5G đầu tiên",
+      "id": "aRHqlaR"
+    },
+    {
+      "title": "iphone ",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644462325/pjmg52aq/reb3l6exryrhqqpzbed2.jpg",
+      "price": "1.000",
+      "status": "hết hàng",
+      "desc": "khong mo ta",
+      "id": "qLhrzXL"
+    },
+    {
+      "title": "iphone 1",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644462409/pjmg52aq/dqu1ytczbygyzxlkvrjr.jpg",
+      "price": "1.000",
+      "status": "hết hàng",
+      "desc": "khong mo ta",
+      "id": "lk_pk_I"
+    }
+  ],
+  "users": [
+    {
+      "email": "dinhlcph18273@fpt.edu.vn",
+      "password": "$2a$10$faujkeQjzj0SwJDyuImvJu3b8a29/CRX7pspGEI/NCxBC8w9u7bu.",
+      "username": "dinh2810",
+      "id": 1
+    },
+    {
+      "email": "dinhlcph18273@fpt.edu.vnd",
+      "password": "$2a$10$dNkqi/Sr4fCuHkYDm/b6j.awX3xfBReTIBJ9eUo2GPZpVe3MP/kci",
+      "username": "ledinh",
+      "id": 2
+    },
+    {
+      "email": "hobao3210@gmail.com",
+      "password": "$2a$10$vEFnZNA9h544K12uFRDXNONoAlosHXvy19tnQSrQJl1hlr6p7adH2",
+      "username": "dinhle",
+      "id": 3
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

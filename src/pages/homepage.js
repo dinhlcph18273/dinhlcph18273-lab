@@ -3,11 +3,10 @@ import footer from "../components/footer";
 import header from "../components/header";
 import logo from "../components/logo";
 import newMenus from "../components/menu";
-import NewsList1 from "../components/newList1";
 import NewsList from "../components/newsList";
 
 const Homepage = {
-    print() {
+    async print() {
         return /* html */ `
         <div class="max-w-5xl mx-auto">
                 <header>
@@ -24,15 +23,18 @@ const Homepage = {
                 </header>
                <main>
                     <div class="news mt-5">
-                    ${NewsList.print()}
+                        ${await NewsList.print()}
                     </div>
                     <div class="news mt-5">
-                        ${NewsList1.print()}
+                        ${await NewsList.print()}
                     </div>
                </main>
                 ${footer.print()}
         </div>
         `;
+    },
+    afterRender() {
+        header.afterRender();
     },
 };
 

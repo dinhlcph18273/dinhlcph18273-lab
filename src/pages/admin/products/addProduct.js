@@ -1,13 +1,13 @@
 import axios from "axios";
 import toastr from "toastr";
-import AdminNews from ".";
-import { add } from "../../../aip/posts";
+import AdminProducts from ".";
+import { addproduct } from "../../../aip/product";
 import NavBarDas from "../../../components/Nav";
 import { reRender } from "../../../utils";
 import "toastr/build/toastr.min.css";
 
-const addPost = {
-    async print() {
+const AddProducts = {
+    print() {
         return /* html */ `
         <div class="min-h-full">
         ${NavBarDas.print()}
@@ -33,23 +33,33 @@ const addPost = {
             <!-- Replace with your content -->
             <div class="px-4 py-6 sm:px-0">
             <div class="">
-            <form class = "border border-black max-w-lg mt-2 mx-auto rounded" id = "form-add-post">
-            <h1 class = "text-center text-3xl text-red-500">Add Post</h1>
+            <form class = "border border-black max-w-lg mt-2 mx-auto rounded" id = "form-add-products">
+            <h1 class = "text-center text-3xl text-red-500">Add Products</h1>
             <div class = "">
                 <div>
                     <label for="price" class="block text-sm font-medium text-gray-700 ml-32">Titile</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
-                    <input type="text" name="price" id="title-post" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="Title...">
+                    <input type="text" name="" id="title-products" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="Title...">
                 </div>
                 <div>
                     <label for="price" class="block text-sm font-medium text-gray-700 ml-32">Image</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
-                    <input type="file" name="price" id="img-post" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="">
-                    </div>
+                    <input type="file" name="" id="img-products" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="">
+                </div>
+                <div>
+                    <label for="price" class="block text-sm font-medium text-gray-700 ml-32">Price</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                    <input type="text" name="" id="price-products" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="Price...">
+                </div>
+                <div>
+                    <label for="price" class="block text-sm font-medium text-gray-700 ml-32">Status</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                    <input type="text" name="" id="status-products" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="Status...">
+                </div>
                 <div>
                     <label for="price" class="block text-sm font-medium text-gray-700 ml-32">Desc</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
-                    <input type="text" name="price" id="desc-post" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="Desc...">
+                    <input type="text" name="" id="desc-products" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="Desc...">
                 </div>
             </div>
             <div class="text-center mb-2">
@@ -62,38 +72,39 @@ const addPost = {
         </div>
         </main>
     </div>
-        <a href = "/#/admin/news" class = "inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Back</a>
+        <a href = "/#/admin/products" class = "inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Back</a>
         `;
     },
     afterRender() {
-        const formAdd = document.querySelector("#form-add-post");
+        const formAdd = document.querySelector("#form-add-products");
         const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dinhlcph18273/image/upload";
         const CLOUDINARY_PRESET = "pjmg52aq";
 
         formAdd.addEventListener("submit", async(e) => {
             e.preventDefault();
-            const file = document.querySelector("#img-post").files[0];
+            const file = document.querySelector("#img-products").files[0];
 
             const formData = new FormData();
             formData.append("file", file);
             formData.append("upload_preset", CLOUDINARY_PRESET);
-
             const { data } = await axios.post(CLOUDINARY_API, formData, {
                 headers: {
                     "Content-Type": "application/form-data",
                 },
             });
-            add({
-                title: document.querySelector("#title-post").value,
+            addproduct({
+                title: document.querySelector("#title-products").value,
                 img: data.url,
-                desc: document.querySelector("#desc-post").value,
+                price: document.querySelector("#price-products").value,
+                status: document.querySelector("#status-products").value,
+                desc: document.querySelector("#desc-products").value,
             }).then(() => {
-                toastr.success("thêm thành công!");
+                toastr.success("Thêm thành công!");
             }).then(() => {
-                reRender(AdminNews, "#app");
+                reRender(AdminProducts, "#app");
             });
         });
     },
 };
 
-export default addPost;
+export default AddProducts;
