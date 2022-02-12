@@ -8,7 +8,7 @@ import NewsList from "../components/newsList";
 const Homepage = {
     async print() {
         return /* html */ `
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-7xl mx-auto">
                 <header>
                     <div id = "header">
                     ${header.print()}

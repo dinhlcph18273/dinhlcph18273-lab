@@ -8,7 +8,7 @@ const NavBarDas = {
               <div class="flex-shrink-0">
               <a  href = "/#">
                 <img
-                  class="w-20 h-30"
+                  class="w-28 h-30"
                   src="https://upload.wikimedia.org/wikipedia/commons/2/20/FPT_Polytechnic.png"
                   alt="Workflow"
                 />
