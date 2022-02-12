@@ -10,7 +10,9 @@ const Homepage = {
         return /* html */ `
         <div class="max-w-5xl mx-auto">
                 <header>
+                    <div id = "header">
                     ${header.print()}
+                    </div>
                     <div class="bg-sky-900 text-center py-4">
                         ${logo.print()}
                     </div>

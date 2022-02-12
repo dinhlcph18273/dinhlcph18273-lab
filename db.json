@@ -92,36 +92,12 @@
   ],
   "products": [
     {
-      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644295228/pjmg52aq/rolfgsc9ekcsun2rr5uc.jpg",
-      "price": 1,
+      "id": "55",
       "title": "iphone 12 pro max",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644554939/pjmg52aq/u21kackwehuhyjqsqt03.jpg",
+      "price": "1",
       "status": "còn hàng",
-      "desc": "sản phẩm iphone 12 pro max hiện đang có giá chỉ 1 chiếc nịt",
-      "id": "55"
-    },
-    {
-      "id": "0nkFlfk",
-      "title": "Samsung A90 5G",
-      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644295228/pjmg52aq/rolfgsc9ekcsun2rr5uc.jpg",
-      "price": "5.000.000",
-      "status": "Còn hàng",
-      "desc": "Điện thoại samsung dòng A có 5G đầu tiên của hãng"
-    },
-    {
-      "title": "Samsung A90 5G",
-      "img": "https://picsum.photos/200/200",
-      "price": "5.000.000",
-      "status": "Còn hàng",
-      "desc": "Điện thoại samsung dòng A có 5G đầu tiên",
-      "id": "aRHqlaR"
-    },
-    {
-      "title": "iphone ",
-      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644462325/pjmg52aq/reb3l6exryrhqqpzbed2.jpg",
-      "price": "1.000",
-      "status": "hết hàng",
-      "desc": "khong mo ta",
-      "id": "qLhrzXL"
+      "desc": "sản phẩm iphone 12 pro max hiện đang có giá chỉ 1 chiếc nịt"
     },
     {
       "title": "iphone 1",
@@ -130,6 +106,14 @@
       "status": "hết hàng",
       "desc": "khong mo ta",
       "id": "lk_pk_I"
+    },
+    {
+      "title": "iphone",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644633127/pjmg52aq/oskicgjlncliuosivkkw.png",
+      "price": "1.000.000",
+      "status": "còn hàng",
+      "desc": "khong mo ta",
+      "id": "1SuMcxh"
     }
   ],
   "users": [
