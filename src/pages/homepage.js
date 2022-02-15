@@ -1,42 +1,51 @@
 import Banner from "../components/banner";
+import category from "../components/cate";
+import commit from "../components/commitment";
 import footer from "../components/footer";
 import header from "../components/header";
-import logo from "../components/logo";
-import newMenus from "../components/menu";
+import headerTop from "../components/headerTop";
 import NewsList from "../components/newsList";
+import products from "../components/product";
 
 const Homepage = {
     async print() {
         return /* html */ `
-        <div class="max-w-7xl mx-auto">
-                <header>
+        <div class="max-w-7xl mx-auto ">
+                <header class = "">
                     <div id = "header">
-                    ${header.print()}
+                    ${headerTop.print()}
                     </div>
-                    <div class="bg-sky-900 text-center py-4">
-                        ${logo.print()}
-                    </div>
-                    <ul class = "bg-orange-400 flex justify-between py-2">
-                        ${newMenus.print()}
-                    </ul>   
-                    <div class="banner">
-                        ${Banner.print()}
-                    </div>
-                </header>
-               <main>
-                    <div class="news mt-5">
-                        ${await NewsList.print()}
-                    </div>
-                    <div class="news mt-5">
-                        ${await NewsList.print()}
-                    </div>
-               </main>
-                ${footer.print()}
+                    <div class="mt-5">
+                        ${header.print()}   
+                    </div>  
+                </header>         
         </div>
+        <div class="banner relative">
+            ${Banner.print()}
+        </div>5
+        <div class="max-w-7xl mx-auto">
+                <h1 class = "text-3xl capitalize text-center my-10 normal">Mua sản phẩm được lựa chọn từ vườn</h1>
+                ${category.print()}
+                <h1 class = "text-3xl capitalize text-center my-10 normal">Sản phẩm nổi bật</h1>
+                    <div class = "grid grid-cols-6 gap-8">
+                        ${await products.print()}
+                    </div>
+                    <div class = "text-center"> 
+                    <button href = "/#/products" class = "py-2 px-5 my-5 text-center bg-lime-500 text-white rounded-md hover:bg-lime-600">Xem thêm</button>
+                    </div>
+            <main>
+                <div class="news mt-10">
+                        ${await NewsList.print()}
+                </div>
+            </main>
+                <h1 class = "text-3xl capitalize text-center my-10 normal">Sản phẩm nổi bật</h1>
+                ${commit.print()}
+        </div>
+                ${footer.print()}
         `;
     },
     afterRender() {
-        header.afterRender();
+        headerTop.afterRender();
     },
 };
 

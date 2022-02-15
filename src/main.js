@@ -21,10 +21,14 @@ const render = async(content, id) => {
     if (content.afterRender) await content.afterRender(id);
 };
 router.on("/admin/*/", () => {}, {
-    before(done, match) {
-        const userId = JSON.parse(localStorage.getItem("user")).id;
-        if (userId === 1) {
-            done();
+    before(done) {
+        if (localStorage.getItem("user")) {
+            const userId = JSON.parse(localStorage.getItem("user")).id;
+            if (userId === 1) {
+                done();
+            } else {
+                document.location.href = "/";
+            }
         } else {
             document.location.href = "/";
         }

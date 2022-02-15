@@ -22,7 +22,9 @@ const editProducts = {
                 <div>
                     <label for="price" class="block text-sm font-medium text-gray-700 ml-32">Image</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
-                    <input type="file" name="" value = "${data.img}" id="products-img" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="">
+                    <input type="file" name="" id="products-img" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="">
+                    <input type="image" value = "${data.img}" name="price" id="img-preview" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="">
+
                 </div>
                 <div>
                     <label for="price" class="block text-sm font-medium text-gray-700 ml-32">Price</label>
@@ -42,7 +44,7 @@ const editProducts = {
                 </div>
             </div>
             <div class="text-center mb-2">
-            <button type = "submit"  class = "border rounded-md mt-5 px-5 py-2 text-sky-500">Tạo mới</button>
+            <button type = "submit"  class = "border rounded-md mt-5 px-5 py-2 text-sky-500">Cập nhật</button>
             </div>
         </form>
         <a href = "/#/admin/news" class = "text-red-500">Back</a>

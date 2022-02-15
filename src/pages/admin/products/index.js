@@ -18,7 +18,7 @@ const AdminProducts = {
                 <h2
                 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate"
                 >
-                Quản Sản phẩm
+                Quản Sản lý phẩm
                 </h2>
             </div>
             <div class="mt-5 flex lg:mt-0 lg:ml-4">
