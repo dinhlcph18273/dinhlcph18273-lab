@@ -15,7 +15,7 @@ const header = {
                     <button type = "submit" class = "absolute right-5"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <button class = "ml-20 text-lg">
-               Cart / <i class="fa-solid fa-cart-shopping text-lg opacity-80"></i>
+               Cart / <button id = "quantityCart"><i class="fa-solid fa-cart-shopping text-lg opacity-80"></i></button>
                 
             </button>
             

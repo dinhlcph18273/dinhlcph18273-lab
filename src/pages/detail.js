@@ -1,10 +1,10 @@
-import axios from "axios";
+import {get } from "../aip/posts";
 import footer from "../components/footer";
 import header from "../components/header";
 
 const DetailPage = {
     async print(id) {
-        const { data } = await axios.get(`http://localhost:3001/posts/${id}`);
+        const { data } = await get(id);
         // const result = data.find((post) => post.id === id);
         return /* html */ `
             ${header.print()}
