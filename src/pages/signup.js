@@ -1,6 +1,8 @@
+import toastr from "toastr";
 import { signup } from "../aip/user";
 import footer from "../components/footer";
 import header from "../components/header";
+import "toastr/build/toastr.min.css";
 
 const Signup = {
     print() {
@@ -65,11 +67,19 @@ const Signup = {
         const formSingup = document.querySelector("#formSingup");
         formSingup.addEventListener("submit", (e) => {
             e.preventDefault();
-            signup({
-                username: document.querySelector("#username").value,
-                email: document.querySelector("#email").value,
-                password: document.querySelector("#password").value,
-            });
+            try {
+                signup({
+                    username: document.querySelector("#username").value,
+                    email: document.querySelector("#email").value,
+                    password: document.querySelector("#password").value,
+                });
+                toastr.success("Đăng ký thành công chờ chút để đăng nhập!");
+                setTimeout(() => {
+                    document.location.href = "/#/signin";
+                }, 3000);
+            } catch (error) {
+                toastr.error("Đăng ký thất bại!");
+            }
         });
     },
 };
