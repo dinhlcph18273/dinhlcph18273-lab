@@ -1,4 +1,5 @@
 import { getproductAll } from "../aip/product";
+// eslint-disable-next-line import/no-cycle
 import ProductPage from "../pages/product";
 import { reRender, search } from "../utils";
 
@@ -6,7 +7,7 @@ const header = {
     print() {
         return /* html */ `
         <div class=" p-2 flex items-center ">
-            <a href=""><img src="http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/mona.png" width="300px" height="100px" alt=""></a>
+            <a href="/#"><img src="http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/mona.png" width="300px" height="100px" alt=""></a>
 
             <ul class = "flex">
                 <li><a class="block p-4 hover:text-white hover:rounded hover:bg-lime-500 text-lg opacity-60" href="/#">Home page</a></li>
