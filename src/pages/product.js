@@ -1,6 +1,7 @@
 import footer from "../components/footer";
 import header from "../components/header";
 import headerTop from "../components/headerTop";
+// eslint-disable-next-line import/no-cycle
 import listCaTe from "../components/listCaTe";
 import products from "../components/product";
 

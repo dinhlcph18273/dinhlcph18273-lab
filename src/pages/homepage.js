@@ -30,8 +30,8 @@ const Homepage = {
                     <div class = "grid grid-cols-6 gap-8">
                         ${await products.print()}
                     </div>
-                    <div class = "text-center"> 
-                    <button href = "/#/products" class = "py-2 px-5 my-5 text-center bg-lime-500 text-white rounded-md hover:bg-lime-600">Xem thêm</button>
+                    <div class = "text-center my-10"> 
+                    <a href = "/#/products" class = "py-2 px-5 text-center bg-lime-500 text-white rounded-md hover:bg-lime-600">Xem thêm</a>
                     </div>
             <main>
                 <div class="news mt-10">
