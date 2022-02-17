@@ -13,6 +13,7 @@ import AdminProducts from "./pages/admin/products";
 import AddProducts from "./pages/admin/products/addProduct";
 import editProducts from "./pages/admin/products/productEdit";
 import Signup from "./pages/signup";
+import detailCart from "./pages/cart";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 
@@ -39,6 +40,7 @@ router.on({
     "/about": () => render(AboutPage),
     "/signin": () => render(Signin),
     "/signup": () => render(Signup),
+    "/carts": () => render(detailCart),
     "/products": () => render(ProductPage),
     "/products/:id": ({ data }) => render(detailProduct, data.id),
     "/admin/products": () => render(AdminProducts),

@@ -14,13 +14,15 @@ const header = {
                     <input type="text" class = "border border-black rounded-xl px-3" placeholder = "Search...">
                     <button type = "submit" class = "absolute right-5"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
-            <button class = "ml-20 text-lg">
-               Cart / <button id = "quantityCart"><i class="fa-solid fa-cart-shopping text-lg opacity-80"></i></button>
-                
+            <button  class = "ml-20 text-lg">
+               Cart / <a href="/#/carts" id = "quantityCart"><i class="fa-solid fa-cart-shopping text-lg opacity-80"></i></a>
             </button>
             
          </div>
         `;
+    },
+    afterRender() {
+
     },
 };
 export default header;

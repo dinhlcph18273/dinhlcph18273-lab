@@ -21,7 +21,7 @@ const ProductPage = {
          <div class="max-w-7xl mx-auto mb-10">
             <h1 class = "text-2xl my-7"><span class = "opacity-70">Trang chủ</span> / Cửa hàng</h1>
             <div class = "flex">
-                <div class = "">
+                <div class = "">    
                 ${listCaTe.print()}
                 </div>
                 <div class = "grid grid-cols-4 gap-8">

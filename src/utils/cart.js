@@ -11,20 +11,39 @@ export const addToCart = (newItem, next) => {
     if (!existItem) {
         cart.push(newItem);
     } else {
-        existItem.quantity++;
+        // eslint-disable-next-line no-plusplus
+        existItem.quantity += newItem.quantity;
     }
     setLocalStrorage("cart", cart);
     next();
 };
 
-export const increaseQuantityFromCart = () => {
-
+export const increaseQuantityFromCart = (id, next) => {
+    // eslint-disable-next-line no-plusplus
+    cart.find((item) => item.id === id).quantity++;
+    localStorage.setItem("cart", JSON.stringify(cart));
+    next();
 };
-export const decreaseQuantityFromCart = () => {
-
+export const decreaseQuantityFromCart = (id, next) => {
+    const currentProduct = cart.find((item) => item.id === id);
+    // eslint-disable-next-line no-plusplus
+    currentProduct.quantity--;
+    if (currentProduct.quantity < 1) {
+        const confirm = window.confirm("Chú có chắc chắn muốn xóa không?");
+        if (confirm) {
+            cart = cart.filter((item) => item.id !== id);
+        }
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    next();
 };
-export const removeItemFromCart = () => {
-
+export const removeItemFromCart = (id, next) => {
+    const confirm = window.confirm("Chú có chắc muốn xóa không?");
+    if (confirm) {
+        cart = cart.filter((item) => item.id !== id);
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    next();
 };
 export const getTotalPrice = () => {
 

@@ -16,7 +16,11 @@ export const removeproduct = (id) => {
     const url = `/products/${id}`;
     return instance.delete(url, id);
 };
-export const updateproduct = (post) => {
-    const url = `/products/${post.id}`;
-    return instance.put(url, post);
+export const updateproduct = (product) => {
+    const url = `/products/${product.id}`;
+    return instance.put(url, product);
+};
+export const filterCaTe = (product) => {
+    const url = `/products?category=${product.category}`;
+    return instance.get(url, product);
 };

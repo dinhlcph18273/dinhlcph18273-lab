@@ -60,8 +60,8 @@ const Signin = {
               </form>
             </div>
         </div>
-        ${footer.print()}
       </div>
+        ${footer.print()}
         `;
     },
     afterRender() {
