@@ -5,7 +5,7 @@ import listCaTe from "../components/listCaTe";
 import products from "../components/product";
 
 const ProductPage = {
-    async print() {
+    async print(arr) {
         return /* html */ `
         
         <header class = "shadow-md">
@@ -24,16 +24,19 @@ const ProductPage = {
                 <div class = "">    
                 ${listCaTe.print()}
                 </div>
-                <div class = "grid grid-cols-4 gap-8">
-                    ${await products.print()}
+                <div class = "grid grid-cols-4 gap-8" id="product">
+                    ${await products.print(arr)}
                 </div>
             </div>
         </div>
         ${footer.print()}
         `;
     },
-    afterRender() {
+    async afterRender() {
         headerTop.afterRender();
+        await listCaTe.afterRender();
+        products.afterRender();
+        await header.afterRender();
     },
 };
 export default ProductPage;

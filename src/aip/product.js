@@ -20,7 +20,3 @@ export const updateproduct = (product) => {
     const url = `/products/${product.id}`;
     return instance.put(url, product);
 };
-export const filterCaTe = (product) => {
-    const url = `/products?category=${product.category}`;
-    return instance.get(url, product);
-};

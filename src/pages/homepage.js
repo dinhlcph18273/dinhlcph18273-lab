@@ -44,8 +44,9 @@ const Homepage = {
                 ${footer.print()}
         `;
     },
-    afterRender() {
+    async afterRender() {
         headerTop.afterRender();
+        await header.afterRender();
     },
 };
 

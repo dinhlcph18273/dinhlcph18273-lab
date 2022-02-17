@@ -62,7 +62,7 @@
             "price": "135,000",
             "status": "còn hàng",
             "desc": "Bơ sáp nhập khẩu từ Lâm Đồng tươi ngon",
-            "category": "trái cây"
+            "category": "1"
         },
         {
             "id": "lk_pk_I",
@@ -71,7 +71,7 @@
             "price": "75,000",
             "status": "Còn hàng",
             "desc": "",
-            "category": "trái cây"
+            "category": "1"
         },
         {
             "id": "1SuMcxh",
@@ -80,7 +80,7 @@
             "price": "75,000",
             "status": "còn hàng",
             "desc": "khong mo ta",
-            "category": "hải sản"
+            "category": "2"
         },
         {
             "title": "Cá Trác vàng biển Ích Hữu 400g",
@@ -89,7 +89,7 @@
             "status": "còn hàng",
             "desc": "khong mo ta",
             "id": "hu1wMzJ",
-            "category": "hải sản"
+            "category": "2"
         },
         {
             "title": "Cải bó xôi hữu cơ (Rau chân vịt) 350g",
@@ -98,7 +98,7 @@
             "status": "còn hàng",
             "desc": "khong mo ta",
             "id": "KGPu23f",
-            "category": "rau củ"
+            "category": "3"
 
         },
         {
@@ -108,7 +108,7 @@
             "status": "còn hàng",
             "desc": "khong mo ta",
             "id": "WIZBMdi",
-            "category": "trái cây"
+            "category": "1"
 
         },
         {
@@ -118,7 +118,7 @@
             "status": "còn hàng",
             "desc": "khong mo ta",
             "id": "uH-HqrI",
-            "category": "thịt trứng"
+            "category": "4"
         },
         {
             "title": "Sầu riêng Ri6 sạch 1kg",
@@ -127,7 +127,7 @@
             "status": "còn hàng",
             "desc": "khong mo ta",
             "id": "i0oT5EB",
-            "category": "trái cây"
+            "category": "1"
 
         },
         {
@@ -137,7 +137,7 @@
             "status": "còn hàng",
             "desc": "khong mo ta",
             "id": "NvhPBT4",
-            "category": "trái cây"
+            "category": "1"
         },
         {
             "title": "Thịt nạc đùi heo hữu cơ 400g Thịt nạc đùi heo hữu cơ 400g",
@@ -146,7 +146,7 @@
             "status": "còn hàng",
             "desc": "khong mo ta",
             "id": "WQYD3y-",
-            "category": "thịt trứng"
+            "category": "4"
 
         },
         {
@@ -156,7 +156,7 @@
             "status": "còn hàng",
             "desc": "khong mo ta",
             "id": "DatMuoD",
-            "category": "hải sản"
+            "category": "2"
 
         },
         {
@@ -166,7 +166,7 @@
             "status": "còn hàng",
             "desc": "khong mo ta",
             "id": "5ZmZUWS",
-            "category": "trái cây"
+            "category": "1"
 
         }
     ],

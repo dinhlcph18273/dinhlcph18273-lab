@@ -1,3 +1,7 @@
+import { getproductAll } from "../aip/product";
+import ProductPage from "../pages/product";
+import { reRender, search } from "../utils";
+
 const header = {
     print() {
         return /* html */ `
@@ -10,19 +14,34 @@ const header = {
                 <li><a class="block p-4 hover:text-white hover:rounded hover:bg-lime-500 text-lg opacity-60" href="/#/products">Product page</a></li>
                 <li><a class="block p-4 hover:text-white hover:rounded hover:bg-lime-500 text-lg opacity-60" href="/#/admin/dashboard">Dashboard page</a></li>
             </ul>   
-             <form action="" class = "pr-2 ml-20 relative">
-                    <input type="text" class = "border border-black rounded-xl px-3" placeholder = "Search...">
-                    <button type = "submit" class = "absolute right-5"><i class="fa-solid fa-magnifying-glass"></i></button>
+             <form action="" id="search" class = "pr-2 ml-20 relative">
+                    <input type="text" id="name" class = "border border-black rounded-xl px-3" placeholder = "Search...">
+                    <button class = "absolute right-5"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
-            <button  class = "ml-20 text-lg">
-               Cart / <a href="/#/carts" id = "quantityCart"><i class="fa-solid fa-cart-shopping text-lg opacity-80"></i></a>
+            <button  class = "ml-20 text-lg relative">
+               Cart / <a href="/#/carts" ><i class="fa-solid fa-cart-shopping text-lg opacity-80" ></i><span class = "absolute top-0 text-red-500" id = "quantityCart"></span></a>
             </button>
             
          </div>
         `;
     },
-    afterRender() {
-
+    async afterRender() {
+        const cart = JSON.parse(localStorage.getItem("cart"));
+        let total = "";
+        if (cart) {
+            cart.forEach((item) => {
+                total += item.quantity;
+            });
+        }
+        document.querySelector("#quantityCart").innerHTML = total;
+        const { data } = await getproductAll();
+        const formSearch = document.querySelector("#search");
+        formSearch.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = document.querySelector("#name").value;
+            // search(data, name);
+            reRender(ProductPage, "#app", search(data, name));
+        });
     },
 };
 export default header;
