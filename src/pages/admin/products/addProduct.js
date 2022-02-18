@@ -5,6 +5,10 @@ import { addproduct } from "../../../aip/product";
 import NavBarDas from "../../../components/Nav";
 import { reRender } from "../../../utils";
 import "toastr/build/toastr.min.css";
+// eslint-disable-next-line import/order
+import $ from "jquery";
+// eslint-disable-next-line import/order
+import validate from "jquery-validation";
 
 const AddProducts = {
     print() {
@@ -37,29 +41,29 @@ const AddProducts = {
             <h1 class = "text-center text-3xl text-red-500">Add Products</h1>
             <div class = "">
                 <div>
-                    <label for="price" class="block text-sm font-medium text-gray-700 ml-32">Titile</label>
+                    <label for="price" class="block text-sm font-medium text-gray-700 ml-32">Title</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
-                    <input type="text" name="" id="title-products" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="Title...">
+                    <input type="text" name="title" id="title-products" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="Title...">
                 </div>
                 <div>
                     <label for="price" class="block text-sm font-medium text-gray-700 ml-32">Image</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
-                    <input type="file" name="" id="img-products" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="">
+                    <input type="file" name="img" id="img-products" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="">
                 </div>
                 <div>
                     <label for="price" class="block text-sm font-medium text-gray-700 ml-32">Price</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
-                    <input type="text" name="" id="price-products" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="Price...">
+                    <input type="text" name="price" id="price-products" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="Price...">
                 </div>
                 <div>
                     <label for="price" class="block text-sm font-medium text-gray-700 ml-32">Status</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
-                    <input type="text" name="" id="status-products" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="Status...">
+                    <input type="text" name="status" id="status-products" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="Status...">
                 </div>
                 <div>
                     <label for="price" class="block text-sm font-medium text-gray-700 ml-32">Desc</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
-                    <input type="text" name="" id="desc-products" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="Desc...">
+                    <input type="text" name="desc" id="desc-products" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="Desc...">
                 </div>
             </div>
             <div class="text-center mb-2">
@@ -80,29 +84,54 @@ const AddProducts = {
         const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dinhlcph18273/image/upload";
         const CLOUDINARY_PRESET = "pjmg52aq";
 
-        formAdd.addEventListener("submit", async(e) => {
-            e.preventDefault();
-            const file = document.querySelector("#img-products").files[0];
-
-            const formData = new FormData();
-            formData.append("file", file);
-            formData.append("upload_preset", CLOUDINARY_PRESET);
-            const { data } = await axios.post(CLOUDINARY_API, formData, {
-                headers: {
-                    "Content-Type": "application/form-data",
+        $("#form-add-products").validate({
+            rules: {
+                title: "required",
+                img: "required",
+                price: {
+                    required: true,
+                    min: 0,
                 },
-            });
-            addproduct({
-                title: document.querySelector("#title-products").value,
-                img: data.url,
-                price: document.querySelector("#price-products").value,
-                status: document.querySelector("#status-products").value,
-                desc: document.querySelector("#desc-products").value,
-            }).then(() => {
-                toastr.success("Thêm thành công!");
-            }).then(() => {
-                reRender(AdminProducts, "#app");
-            });
+                status: "required",
+                desc: "required",
+
+            },
+            messages: {
+                title: "Vui lòng nhập tiêu đề bài viết",
+                img: "Vui lòng chọn ảnh",
+                price: {
+                    required: "Vui lòng nhập giá",
+                    min: "Giá phải lớn hơn 0",
+                },
+                status: "Vui lòng điền trạng thái",
+                desc: "Vui lòng điền mô tả cho bài viết",
+            },
+            submitHandler: () => {
+                async function addProductForm() {
+                    const file = document.querySelector("#img-products").files[0];
+
+                    const formData = new FormData();
+                    formData.append("file", file);
+                    formData.append("upload_preset", CLOUDINARY_PRESET);
+                    const { data } = await axios.post(CLOUDINARY_API, formData, {
+                        headers: {
+                            "Content-Type": "application/form-data",
+                        },
+                    });
+                    addproduct({
+                        title: document.querySelector("#title-products").value,
+                        img: data.url,
+                        price: document.querySelector("#price-products").value,
+                        status: document.querySelector("#status-products").value,
+                        desc: document.querySelector("#desc-products").value,
+                    }).then(() => {
+                        toastr.success("Thêm thành công!");
+                    }).then(() => {
+                        reRender(AdminProducts, "#app");
+                    });
+                }
+                addProductForm();
+            },
         });
     },
 };

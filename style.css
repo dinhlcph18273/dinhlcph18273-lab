@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+label.error {
+    color: red;
+    text-align: center;
+    display: block;
+}

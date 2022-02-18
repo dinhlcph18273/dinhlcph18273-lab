@@ -3,6 +3,9 @@ import { signup } from "../aip/user";
 import footer from "../components/footer";
 import header from "../components/header";
 import "toastr/build/toastr.min.css";
+import $ from "jquery";
+// eslint-disable-next-line import/order
+import validate from "jquery-validation";
 
 const Signup = {
     print() {
@@ -17,20 +20,20 @@ const Signup = {
               Sign up to your account
             </h2>
           </div>
-          <form class="mt-8 space-y-6" action="#" method="POST" id = "formSingup">
+          <form class="mt-8 space-y-6" action="" method="POST" id = "formSingup">
             <input type="hidden" name="remember" value="true">
             <div class="rounded-md shadow-sm -space-y-px">
               <div>
               <label for="password" class="sr-only">UserName</label>
-              <input id="username" name="" type="text" autocomplete="current-password" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="UserName">
+              <input id="username" name="username" type="text" autocomplete="current-password"  class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="UserName">
               </div>
               <div>
                 <label for="email-address" class="sr-only">Email address</label>
-                <input id="email" name="email" type="email" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
+                <input id="email" name="email" type="email" autocomplete="email"  class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
               </div>
               <div>
                 <label for="password" class="sr-only">Password</label>
-                <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+                <input id="password" name="password" type="password" autocomplete="current-password"  class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
               </div>
             </div>
       
@@ -65,21 +68,48 @@ const Signup = {
     },
     afterRender() {
         const formSingup = document.querySelector("#formSingup");
-        formSingup.addEventListener("submit", (e) => {
-            e.preventDefault();
-            try {
-                signup({
-                    username: document.querySelector("#username").value,
-                    email: document.querySelector("#email").value,
-                    password: document.querySelector("#password").value,
-                });
-                toastr.success("Đăng ký thành công chờ chút để đăng nhập!");
-                setTimeout(() => {
-                    document.location.href = "/#/signin";
-                }, 3000);
-            } catch (error) {
-                toastr.error("Đăng ký thất bại!");
-            }
+
+        $("#formSingup").validate({
+            rules: {
+                username: "required",
+                email: {
+                    required: true,
+                    email: true,
+                },
+                password: {
+                    required: true,
+                    minlength: 6,
+                },
+            },
+            messages: {
+                username: "Vui lòng điền Username",
+                email: {
+                    required: "Vui lòng nhập tiêu đề bài viết",
+                    email: "Email chưa đúng định dạng",
+                },
+                password: {
+                    required: "Vui lòng nhập PassWord",
+                    minlength: "PassWord phải lớn hơn 6 kí tự",
+                },
+            },
+            submitHandler() {
+                async function signupForm() {
+                    try {
+                        signup({
+                            username: document.querySelector("#username").value,
+                            email: document.querySelector("#email").value,
+                            password: document.querySelector("#password").value,
+                        });
+                        toastr.success("Đăng ký thành công chờ chút để đăng nhập!");
+                        setTimeout(() => {
+                            document.location.href = "/#/signin";
+                        }, 3000);
+                    } catch (error) {
+                        toastr.error("Đăng ký thất bại!");
+                    }
+                }
+                signupForm();
+            },
         });
     },
 };

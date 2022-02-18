@@ -3,6 +3,10 @@ import { signin } from "../aip/user";
 import footer from "../components/footer";
 import header from "../components/header";
 import "toastr/build/toastr.min.css";
+// eslint-disable-next-line import/order
+import $ from "jquery";
+// eslint-disable-next-line import/order
+import validate from "jquery-validation";
 
 const Signin = {
     print() {
@@ -66,26 +70,66 @@ const Signin = {
     },
     afterRender() {
         const formSingup = document.querySelector("#formSingin");
-        formSingup.addEventListener("submit", async(e) => {
-            e.preventDefault();
-            try {
-                const { data } = await signin({
-                    email: document.querySelector("#email").value,
-                    password: document.querySelector("#password").value,
-                });
-                localStorage.setItem("user", JSON.stringify(data.user));
-                toastr.success("Đăng nhập thành công, chờ chút để chuyển trang!");
-                setTimeout(() => {
-                    if (data.user.id === 1) {
-                        document.location.href = "#/admin/dashboard";
-                    } else {
-                        document.location.href = "/#/";
+        $("#formSingin").validate({
+            rules: {
+                email: {
+                    required: true,
+                    email: true,
+                },
+                password: "required",
+
+            },
+            messages: {
+                email: {
+                    required: "Vui lòng nhập tiêu đề bài viết",
+                    email: "Email chưa đúng định dạng",
+                },
+                password: "Vui lòng nhập PassWord",
+            },
+            submitHandler: () => {
+                async function loginForm() {
+                    try {
+                        const { data } = await signin({
+                            email: document.querySelector("#email").value,
+                            password: document.querySelector("#password").value,
+                        });
+                        localStorage.setItem("user", JSON.stringify(data.user));
+                        toastr.success("Đăng nhập thành công, chờ chút để chuyển trang!");
+                        setTimeout(() => {
+                            if (data.user.id === 1) {
+                                document.location.href = "#/admin/dashboard";
+                            } else {
+                                document.location.href = "/#/";
+                            }
+                        }, 3000);
+                    } catch (error) {
+                        toastr.error(error.response.data);
                     }
-                }, 3000);
-            } catch (error) {
-                toastr.error(error.response.data);
-            }
+                }
+                loginForm();
+            },
         });
+
+        // formSingup.addEventListener("submit", async(e) => {
+        //     e.preventDefault();
+        //     try {
+        //         const { data } = await signin({
+        //             email: document.querySelector("#email").value,
+        //             password: document.querySelector("#password").value,
+        //         });
+        //         localStorage.setItem("user", JSON.stringify(data.user));
+        //         toastr.success("Đăng nhập thành công, chờ chút để chuyển trang!");
+        //         setTimeout(() => {
+        //             if (data.user.id === 1) {
+        //                 document.location.href = "#/admin/dashboard";
+        //             } else {
+        //                 document.location.href = "/#/";
+        //             }
+        //         }, 3000);
+        //     } catch (error) {
+        //         toastr.error(error.response.data);
+        //     }
+        // });
     },
 };
 
