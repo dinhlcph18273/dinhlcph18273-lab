@@ -47,7 +47,7 @@ const editProducts = {
             <button type = "submit"  class = "border rounded-md mt-5 px-5 py-2 text-sky-500">Cập nhật</button>
             </div>
         </form>
-        <a href = "/#/admin/news" class = "text-red-500">Back</a>
+        <a href = "/#/admin/products" class = "text-red-500">Back</a>
         `;
     },
     afterRender(id) {
