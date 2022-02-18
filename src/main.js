@@ -31,7 +31,7 @@ router.on("/admin/*/", () => {}, {
                 document.location.href = "/";
             }
         } else {
-            document.location.href = "/";
+            document.location.href = "/signin";
         }
     },
 });
