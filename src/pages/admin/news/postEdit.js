@@ -44,13 +44,18 @@ const PostEdit = {
     afterRender(id) {
         const formEdit = document.querySelector("#form-edit");
         const postImg = document.querySelector("#preview-img");
+        const imgPost = document.querySelector("#img-post");
         const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dinhlcph18273/image/upload";
         const CLOUDINARY_PRESET = "pjmg52aq";
         let postImgLink = "";
 
+        imgPost.addEventListener("change", (e) => {
+            postImg.src = URL.createObjectURL(e.target.files[0]);
+        });
+
         formEdit.addEventListener("submit", async(e) => {
             e.preventDefault();
-            const file = document.querySelector("#img-post").files[0];
+            const file = imgPost.files[0];
             if (file) {
                 const formData = new FormData();
                 formData.append("file", file);

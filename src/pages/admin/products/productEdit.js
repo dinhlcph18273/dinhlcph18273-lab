@@ -53,13 +53,17 @@ const editProducts = {
     afterRender(id) {
         const formEdit = document.querySelector("#form-edit");
         const productImg = document.querySelector("#preview-img");
+        const imgProduct = document.querySelector("#products-img");
         const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dinhlcph18273/image/upload";
         const CLOUDINARY_PRESET = "pjmg52aq";
         let productImglink = "";
 
+        imgProduct.addEventListener("change", (e) => {
+            productImg.src = URL.createObjectURL(e.target.files[0]);
+        });
         formEdit.addEventListener("submit", async(e) => {
             e.preventDefault();
-            const file = document.querySelector("#products-img").files[0];
+            const file = imgProduct.files[0];
             if (file) {
                 const formData = new FormData();
                 formData.append("file", file);
