@@ -7,14 +7,19 @@ import "toastr/build/toastr.min.css";
 import $ from "jquery";
 // eslint-disable-next-line import/order
 import validate from "jquery-validation";
+import headerTop from "../components/headerTop";
 
 const Signup = {
     print() {
         return /* html */ `
-        <div class="max-w-7xl mx-auto ">
+        <div class = "bg-[url('https://res.cloudinary.com/dinhlcph18273/image/upload/v1645244628/nam_van_chi_2_n5a79k.jpg')]">
+        <div class="max-w-7xl mx-auto"> 
+        <div class="text-white">
+          ${headerTop.print()}
           ${header.print()}
-          <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-md w-full space-y-8 border p-10 rounded-lg">
+        </div>
+          <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 ">
+            <div class="max-w-md w-full space-y-8 border p-10 rounded-lg bg-white">
               <div>
                 <img class="mx-auto h-12 w-auto" src="http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/mona.png" alt="Workflow">
                 <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -64,6 +69,7 @@ const Signup = {
           </div>
         </div>
       ${footer.print()}
+      </div>
         
     `;
     },
@@ -101,7 +107,7 @@ const Signup = {
                         });
                         toastr.success("Đăng ký thành công chờ chút để đăng nhập!");
                         setTimeout(() => {
-                            document.location.href = "/#/signin";
+                            document.location.href = "#/signin";
                         }, 3000);
                     } catch (error) {
                         toastr.error("Đăng ký thất bại!");
