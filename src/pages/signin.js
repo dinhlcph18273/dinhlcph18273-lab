@@ -17,7 +17,7 @@ const Signin = {
           <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
             <div class="max-w-md w-full space-y-8 border p-10 rounded-lg">
               <div>
-                <img class="mx-auto h-12 w-auto" src="https://upload.wikimedia.org/wikipedia/commons/2/20/FPT_Polytechnic.png" alt="Workflow">
+                <img class="mx-auto h-12 w-auto" src="http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/mona.png" alt="Workflow">
                 <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
                   Sign in to your account
                 </h2>
@@ -69,7 +69,6 @@ const Signin = {
         `;
     },
     afterRender() {
-        const formSingup = document.querySelector("#formSingin");
         $("#formSingin").validate({
             rules: {
                 email: {

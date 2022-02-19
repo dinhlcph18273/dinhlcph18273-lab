@@ -55,7 +55,6 @@ const editProducts = {
         `;
     },
     afterRender(id) {
-        const formEdit = document.querySelector("#form-edit");
         const productImg = document.querySelector("#preview-img");
         const imgProduct = document.querySelector("#products-img");
         const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dinhlcph18273/image/upload";
@@ -98,12 +97,12 @@ const editProducts = {
                                 "Content-Type": "application/form-data",
                             },
                         });
-                        productImglink = data;
+                        productImglink = data.url;
                     }
                     updateproduct({
                         id,
                         title: document.querySelector("#products-title").value,
-                        img: productImglink ? productImglink.url : productImg.src,
+                        img: productImglink || productImg.src,
                         price: document.querySelector("#products-price").value,
                         status: document.querySelector("#products-status").value,
                         desc: document.querySelector("#products-desc").value,

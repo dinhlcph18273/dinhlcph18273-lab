@@ -49,7 +49,8 @@ const addPost = {
                     <label for="price" class="block text-sm font-medium text-gray-700 ml-32">Image</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
                     <input type="file" name="img" id="img-post" class="focus:ring-indigo-500 focus:border-indigo-500 block w-1/2 pl-7 pr-12 sm:text-sm border-gray-300 rounded-md border mx-auto" placeholder="">
-                    </div>
+                    <img id="preview-img" class="mx-auto" alt="" src="https://media.istockphoto.com/vectors/no-thumbnail-image-vector-graphic-vector-id1147544806?k=20&m=1147544806&s=170667a&w=0&h=5rN3TBN7bwbhW_0WyTZ1wU_oW5Xhan2CNd-jlVVnwD0="> 
+                </div>
                 <div>
                     <label for="price" class="block text-sm font-medium text-gray-700 ml-32">Desc</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
@@ -71,9 +72,14 @@ const addPost = {
         `;
     },
     afterRender() {
-        const formAdd = document.querySelector("#form-add-post");
+        const imgPost = document.querySelector("#img-post");
+        const previewImg = document.querySelector("#preview-img");
         const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dinhlcph18273/image/upload";
         const CLOUDINARY_PRESET = "pjmg52aq";
+        let imgAddPosstLink = "";
+        imgPost.addEventListener("change", (e) => {
+            previewImg.src = URL.createObjectURL(e.target.files[0]);
+        });
 
         $("#form-add-post").validate({
             rules: {
@@ -82,27 +88,31 @@ const addPost = {
                 desc: "required",
 
             },
-            // messages: {
-            //     title: "Vui lòng nhập tiêu đề bài viết",
-            //     img: "Vui lòng chọn ảnh",
-            //     desc: "Vui lòng điền mô tả cho bài viết",
-            // },
+            messages: {
+                title: "Vui lòng nhập tiêu đề bài viết",
+                img: "Vui lòng chọn ảnh",
+                desc: "Vui lòng điền mô tả cho bài viết",
+            },
             submitHandler: () => {
                 async function addPostForm() {
-                    const file = document.querySelector("#img-post").files[0];
+                    const file = imgPost.files[0];
 
-                    const formData = new FormData();
-                    formData.append("file", file);
-                    formData.append("upload_preset", CLOUDINARY_PRESET);
+                    if (file) {
+                        const formData = new FormData();
+                        formData.append("file", file);
+                        formData.append("upload_preset", CLOUDINARY_PRESET);
 
-                    const { data } = await axios.post(CLOUDINARY_API, formData, {
-                        headers: {
-                            "Content-Type": "application/form-data",
-                        },
-                    });
+                        const { data } = await axios.post(CLOUDINARY_API, formData, {
+                            headers: {
+                                "Content-Type": "application/form-data",
+                            },
+                        });
+                        imgAddPosstLink = data.url;
+                    }
+
                     add({
                         title: document.querySelector("#title-post").value,
-                        img: data.url,
+                        img: imgAddPosstLink || "",
                         desc: document.querySelector("#desc-post").value,
                     }).then(() => {
                         toastr.success("thêm thành công!");

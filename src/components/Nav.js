@@ -1,15 +1,15 @@
 const NavBarDas = {
     print() {
         return /* html */ `
-        <nav class="bg-gray-800">
+        <nav class="bg-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex items-center justify-between h-16">
             <div class="flex items-center">
               <div class="flex-shrink-0">
               <a  href = "/#">
                 <img
-                  class="w-28 h-30"
-                  src="https://upload.wikimedia.org/wikipedia/commons/2/20/FPT_Polytechnic.png"
+                  class="w-36 "
+                  src="http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/mona.png"
                   alt="Workflow"
                 />
               </a>

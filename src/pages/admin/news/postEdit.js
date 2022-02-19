@@ -45,7 +45,6 @@ const PostEdit = {
         `;
     },
     afterRender(id) {
-        const formEdit = document.querySelector("#form-edit");
         const postImg = document.querySelector("#preview-img");
         const imgPost = document.querySelector("#img-post");
         const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dinhlcph18273/image/upload";
@@ -78,12 +77,12 @@ const PostEdit = {
                                 "Content-Type": "application/form-data",
                             },
                         });
-                        postImgLink = data;
+                        postImgLink = data.url;
                     }
                     update({
                         id,
                         title: document.querySelector("#title-post").value,
-                        img: postImgLink ? postImgLink.url : postImg.src,
+                        img: postImgLink || postImg.src,
                         desc: document.querySelector("#desc-post").value,
                     }).then(() => {
                         toastr.success("Sửa thành công!");
