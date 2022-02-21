@@ -1,8 +1,8 @@
 import toastr from "toastr";
+import "toastr/build/toastr.min.css";
 import footer from "../components/footer";
 import header from "../components/header";
 import headerTop from "../components/headerTop";
-import "toastr/build/toastr.min.css";
 import {
     decreaseQuantityFromCart,
     getTotalPrice,
@@ -22,47 +22,50 @@ const detailCart = {
                 cart = JSON.parse(localStorage.getItem("cart"));
             }
             return /* html */ `
-         <header class = "shadow-md">
-         <div class="max-w-7xl mx-auto">    
-            ${headerTop.print()}     
-            ${header.print()}
-         </div>
-        </header>
-        <div class="py-10 ">
-        ${localStorage.getItem("cart") ? `
-            <table class = "box-border">
-                    <thead>
-                        <tr class = "border">
-                            <th class = "border">STT</th>
-                            <th class = "border">Tên</th>
-                            <th class = "border">Ảnh</th>
-                            <th class = "border">Số lượng</th>
-                            <th class = "border">Giá</th>
-                            <th class = "border">Action</th>
+            <header class = "shadow-md">
+                <div class="max-w-7xl mx-auto">    
+                    ${headerTop.print()}     
+                    ${header.print()}
+                </div>
+            </header>
+        <div class="max-w-7xl mx-auto py-10 grid grid-cols-2">
+            <div>
+            ${localStorage.getItem("cart") ? `
+                <table>
+                        <thead>
+                            <tr class = "border-b-4">
+                                <th class = "text-left text-lg">Sản phẩm</th>
+                                <th class = "text-lg">Giá</th>
+                                <th class = "text-lg">Số lượng</th>
+                                <th class = "text-lg">Tổng</th>
+                            </tr>
+                        </thead>
+                    ${cart.map((item) => `     
+                    <tbody>
+                        <tr class = "border-b py-4">
+                            <td class = " text-center flex items-center py-4">
+                            <button data-id=${item.id} class="btn btn-remove border px-1 rounded opacity-70 hover:opacity-100 hover:text-red-500 mx-2"><i class="fa-solid fa-xmark"></i></button>
+                            <img class = "w-1/6 mr-2" src="${item.img}" alt="">
+                            ${item.title}
+                            </td>
+                            <td class = " text-center py-4 text-lime-500">${item.price}đ</td>
+                            <td class = " text-center py-4 px-4 flex "><button data-id="${item.id}" class="btn btn-decrease border"><i class="fa-solid fa-minus"></i></button><button class="px-2 border">${item.quantity}</button><button data-id="${item.id}" class="btn btn-increase border"><i class="fa-solid fa-plus"></i></button></td>
+                            <td class = " text-center py-4 text-lime-500">${item.quantity * item.price}đ</td>
+                        
                         </tr>
-                    </thead>
-                ${cart.map((item, index) => `     
-                <tbody>
-                    <tr class = "border">
-                        <td class = "border text-center">${index + 1}</td>
-                        <td class = "border text-center">${item.title}</td>
-                        <td class = "border text-center"><img class = "w-1/2 h-1/2 mx-auto" src="${item.img}" alt=""></td>
-                        <td class = "border text-center"><button data-id="${item.id}" class="btn btn-decrease"><i class="fa-solid fa-minus"></i></button><button class="px-2">${item.quantity}</button><button data-id="${item.id}" class="btn btn-increase"><i class="fa-solid fa-plus"></i></button></td>
-                        <td class = "border text-center money">${item.quantity * item.price}</td>
-                        <td class = "border text-center ">
-                            <button data-id=${item.id} class="btn btn-remove px-4 py-3 text-white rounded bg-indigo-500 hover:bg-indigo-800">Delete</button>
-                        </td>
+                    </tbody>
+                    `).join(" ")}
+                    </table>
+                    <tr class=" text-center">
+                            <td class="text-center"><h2 class="text-right pr-12 text-xl">Total: ${getTotalPrice()}đ</h2></td>
                     </tr>
-                </tbody>
-                `).join(" ")}
-                </table>
-                 <tr class="border text-center">
-                        <td class="text-center"><h2 class="text-right pr-12 text-xl">Total: ${getTotalPrice()}đ</h2></td>
-                </tr>
-        ` : `
-            <h1 class="text-center text-3xl text-red-500">Giỏ hàng Trống!</h1>
-        `}
-          
+            ` : `
+                <h1 class="text-center text-3xl text-red-500">Giỏ hàng Trống!</h1>
+            `}
+            </div>
+            <div>
+
+            </div>
         </div>
         ${footer.print()}
         `;
@@ -87,7 +90,6 @@ const detailCart = {
                 } else {
                     removeItemFromCart(id, () => {
                         reRender(detailCart, "#app");
-                        toastr.success("Xóa thành công");
                     });
                 }
             });

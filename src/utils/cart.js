@@ -1,4 +1,6 @@
+import toastr from "toastr";
 import { getLocalStrorange, setLocalStrorage } from ".";
+import "toastr/build/toastr.min.css";
 
 let cart = [];
 if (localStorage.getItem("cart")) {
@@ -33,6 +35,7 @@ export const decreaseQuantityFromCart = (id, next) => {
         if (confirm) {
             cart = cart.filter((item) => item.id !== id);
         }
+        currentProduct.quantity += 1;
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     next();
@@ -41,6 +44,7 @@ export const removeItemFromCart = (id, next) => {
     const confirm = window.confirm("Chú có chắc muốn xóa không?");
     if (confirm) {
         cart = cart.filter((item) => item.id !== id);
+        toastr.success("Xóa thành công");
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     next();
