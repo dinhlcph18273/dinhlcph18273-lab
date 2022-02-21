@@ -13,11 +13,15 @@ const detailCart = {
                 cart = JSON.parse(localStorage.getItem("cart"));
             }
             return /* html */ `
-        <div class=" shadow-md mb-10">
+        <div class="shadow-md mb-10">
+            <header class="max-w-7xl mx-auto">
             <div class = "header">
                 ${headerTop.print()}
             </div>
+            <div>
             ${header.print()}
+            </div>
+            </header>
         </div>
         <div class="py-10 ">
         ${localStorage.getItem("cart") ? `
