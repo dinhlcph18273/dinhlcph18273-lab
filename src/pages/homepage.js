@@ -24,7 +24,6 @@ const Homepage = {
             ${Banner.print()}
         </div>5
         <div class="max-w-7xl mx-auto">
-                <h1 class = "text-3xl capitalize text-center my-10 normal">Mua sản phẩm được lựa chọn từ vườn</h1>
                 ${category.print()}
                 <h1 class = "text-3xl capitalize text-center my-10 normal">Sản phẩm nổi bật</h1>
                     <div class = "grid grid-cols-6 gap-8">
@@ -38,7 +37,7 @@ const Homepage = {
                         ${await NewsList.print()}
                 </div>
             </main>
-                <h1 class = "text-3xl capitalize text-center my-10 normal">Cam kết của chúng tôi</h1>
+                
                 ${commit.print()}
         </div>
                 ${footer.print()}

@@ -1,6 +1,7 @@
 const category = {
     print() {
         return /* html */ ` 
+        <h1 class = "text-3xl capitalize text-center my-10 normal">Mua sản phẩm được lựa chọn từ vườn</h1>
             <div class="relative grid grid-cols-6 ">
         <div class="col-inner text-center">
             <div class="container">

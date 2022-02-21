@@ -28,7 +28,7 @@ const header = {
     },
     async afterRender() {
         const cart = JSON.parse(localStorage.getItem("cart"));
-        let total = "";
+        let total = 0;
         if (cart) {
             cart.forEach((item) => {
                 total += item.quantity;

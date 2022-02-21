@@ -46,5 +46,13 @@ export const removeItemFromCart = (id, next) => {
     next();
 };
 export const getTotalPrice = () => {
+    if (localStorage.getItem("cart")) {
+        cart = getLocalStrorange("cart");
+    }
+    let toTal = 0;
 
+    cart.forEach((element) => {
+        toTal += Number(element.price) * element.quantity;
+    });
+    return toTal;
 };
