@@ -72,13 +72,42 @@ const detailCart = {
                                 Tổng Phụ
                             </td>
                             <td class="py-5">
-                                <h2 class="pl-[280px] text-lime-500">Total: ${getTotalPrice()} đ</h2>
+                                <h2 class="pl-[400px] text-lime-500">${getTotalPrice()} đ</h2>
                             </td>
                             
                         </tr>
                     </tbody>
                 </table>
-
+                <div class="flex justify-between border-b py-4">
+                    <div>
+                        <p>Giao hàng</p>
+                    </div>
+                     <div>
+                        <p>Giao hàng miễn phí</p>
+                        <p>Đây chỉ là ước tính.
+                        Giá sẽ cập nhật trong quá trình thanh toán.</p>
+                        
+                    </div>
+                </div>
+                <table class="border-b-2 py-4">
+                    <thead>
+                        <th></th>
+                        <th></th>
+                    </thead>
+                    <tbody class=""> 
+                        <tr >
+                            <td>Tổng</td>
+                            <td>
+                                 <h2 class="pl-[480px] text-lime-500">${getTotalPrice()} đ</h2>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+               <div class="text-center border py-2 mt-3 bg-orange-700 text-white hover:bg-orange-800">
+                <a class="text-xl" src="">
+                    Tiến Hành Thanh Toán
+                </a>
+               </div>
             </div>
         </div>
         ${footer.print()}
