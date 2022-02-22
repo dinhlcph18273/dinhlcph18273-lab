@@ -53,8 +53,9 @@ export const getTotalPrice = () => {
     if (localStorage.getItem("cart")) {
         cart = getLocalStrorange("cart");
     }
+    const user = JSON.parse(localStorage.getItem("user"));
     let toTal = 0;
-
+    cart = cart.filter((item) => item.user === user.id);
     cart.forEach((element) => {
         toTal += Number(element.price) * element.quantity;
     });

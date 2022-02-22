@@ -44,11 +44,16 @@ const detailProduct = {
     },
     afterRender(id) {
         headerTop.afterRender();
+        const userid = JSON.parse(localStorage.getItem("user"));
         const btnAddToCart = document.querySelector("#btnAddToCart");
         const inputvalue = document.querySelector("#inputValue");
         btnAddToCart.addEventListener("click", async() => {
             const { data } = await getproduct(id);
-            addToCart({...data, quantity: inputvalue.value ? +inputvalue.value : 1 }, () => {
+            addToCart({
+                ...data,
+                quantity: inputvalue.value ? +inputvalue.value : 1,
+                user: userid.id,
+            }, () => {
                 toastr.success("Thêm Thành công");
             });
         });

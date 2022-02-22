@@ -14,6 +14,9 @@ import AddProducts from "./pages/admin/products/addProduct";
 import editProducts from "./pages/admin/products/productEdit";
 import Signup from "./pages/signup";
 import detailCart from "./pages/cart";
+import checkout from "./pages/checkout/checkout";
+import listOrderAdmin from "./pages/admin/order/order";
+import listOrder from "./pages/checkout/listorder";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 
@@ -41,7 +44,10 @@ router.on({
     "/signin": () => render(Signin),
     "/signup": () => render(Signup),
     "/carts": () => render(detailCart),
+    "/checkout": () => render(checkout),
     "/products": () => render(ProductPage),
+    "/listorder": () => render(listOrder),
+    "/admin/order": () => render(listOrderAdmin),
     "/products/:id": ({ data }) => render(detailProduct, data.id),
     "/admin/products": () => render(AdminProducts),
     "/admin/products/add": () => render(AddProducts),

@@ -27,11 +27,13 @@ const header = {
         `;
     },
     async afterRender() {
-        const cart = JSON.parse(localStorage.getItem("cart"));
+        let cart = JSON.parse(localStorage.getItem("cart"));
+        const user = JSON.parse(localStorage.getItem("user"));
+        cart = cart.filter((item) => item.user === user.id);
         let total = 0;
         if (cart) {
             cart.forEach((item) => {
-                total += item.quantity;
+                total += +item.price;
             });
         }
         document.querySelector("#quantityCart").innerHTML = total;

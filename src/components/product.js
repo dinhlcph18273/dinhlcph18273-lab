@@ -2,6 +2,8 @@ import toastr from "toastr";
 import { getproduct, getproductAll } from "../aip/product";
 import "toastr/build/toastr.min.css";
 import { addToCart } from "../utils/cart";
+import { reRender } from "../utils";
+import header from "./header";
 
 const products = {
         async print(fil) {
@@ -30,12 +32,14 @@ const products = {
     },
     afterRender() {
         const addCart = document.querySelectorAll(".btn-add");
+        const userid = JSON.parse(localStorage.getItem("user"));
         addCart.forEach((item) => {
             item.addEventListener("click", async () => {
                 const { id } = item.dataset;
                 const { data } = await getproduct(id);
-                addToCart({ ...data, quantity: 1 }, () => {
+                addToCart({ ...data, quantity: 1, user: userid.id }, () => {
                     toastr.success("Thêm Thành công");
+                    reRender(header, "#header-main");
                 });
             });
         });

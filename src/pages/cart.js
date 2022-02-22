@@ -21,6 +21,8 @@ const detailCart = {
             if (localStorage.getItem("cart")) {
                 cart = JSON.parse(localStorage.getItem("cart"));
             }
+            const user = JSON.parse(localStorage.getItem("user"));
+            cart = cart.filter((item) => item.user === user.id);
             return /* html */ `
             <header class = "shadow-md">
                 <div class="max-w-7xl mx-auto">    
@@ -60,7 +62,11 @@ const detailCart = {
                 <h1 class="text-center text-3xl text-red-500">Giỏ hàng Trống!</h1>
             `}
             </div>
-            <div class="pl-10 border-l">
+            <div class="pl-10 border-l" id="check">
+               <div class="text-center">
+                 <p>Email: ${user.email}</p>
+                 <p>UserName: ${user.username}</p>
+               </div>
                 <table class="max-w-full">
                     <thead class="border-b-4">
                         <th class="text-lg">Tổng số lượng</th>
@@ -103,8 +109,8 @@ const detailCart = {
                         </tr>
                     </tbody>
                 </table>
-               <div class="text-center border py-2 mt-3 bg-orange-700 text-white hover:bg-orange-800">
-                <a class="text-xl" src="">
+                <div class="text-center border py-2 mt-3 bg-orange-700 text-white hover:bg-orange-800">
+                <a class="text-xl" href="/#/checkout">
                     Tiến Hành Thanh Toán
                 </a>
                </div>

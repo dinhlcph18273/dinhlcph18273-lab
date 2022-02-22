@@ -13,7 +13,7 @@ const Homepage = {
             <div id = "header">
             ${headerTop.print()}
             </div>
-            <div class="">
+            <div class="header-main">
                 ${header.print()}
             </div>
          </div>

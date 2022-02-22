@@ -1,196 +1,237 @@
 {
-    "posts": [{
-            "id": "8",
-            "title": "Công ty Thực Phẩm Tâm Minh",
-            "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/logo-1.png",
-            "desc": "Công ty TNHH Thực phẩm Tâm Minh có sản xuất Bột nêm Ngưu ...."
-        },
-        {
-            "createdAt": "2022-01-15T02:36:13.715Z",
-            "title": "Công Ty Thiên Nhiên Việt",
-            "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/viet_nature_logotype_color_on_white2.png",
-            "desc": "Công ty TNHH Xuất Nhập Khẩu Thiên Nhiên Việt chuyên về sản ...",
-            "id": "9"
-        },
-        {
-            "createdAt": "2022-01-14T12:38:27.738Z",
-            "title": "Binca Việt Nam",
-            "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/binca-vietnam-logo_large.png",
-            "desc": "Chính thức bước vào thị trường Việt Nam vào năm 1998, sau ...",
-            "id": "10"
-        },
-        {
-            "createdAt": "2022-01-14T17:58:26.446Z",
-            "title": "Antofu Việt Nam",
-            "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/upload_2a9f0c359ba448c785490ea0c0ed3dc0_large.jpg",
-            "desc": "Antofu Việt Nam là công ty được đầu tư với 100% nguồn vốn ...",
-            "id": "11"
-        },
-        {
-            "createdAt": "2022-01-15T02:21:11.908Z",
-            "title": "Làm thế nào để được chứng nhận hữu cơ ở Việt Nam?",
-            "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/index_news_1.png",
-            "desc": "Chứng nhận hữu cơ là một tiêu chuẩn góp phần đảm bảo tính giá trị cho các sản phẩm hữu cơ.",
-            "id": "13"
-        },
-        {
-            "createdAt": "2022-01-14T11:14:02.843Z",
-            "title": "Giải đáp : Thực phẩm hữu cơ Organic là gì ?",
-            "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/index_news_2.jpg",
-            "desc": "Thực phẩm organic hay còn gọi là thực phẩm hữu cơ đang ngày một phổ biến và tạo một cơn sốt trên thị trường hiện nay.",
-            "id": "14"
-        },
-        {
-            "createdAt": "2022-01-15T00:11:58.958Z",
-            "title": "Nông nghiệp hữu cơ và thực trạng chứng nhận tại Việt Nam",
-            "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/index_news_3.jpg",
-            "desc": "Là một mô hình nông nghiệp còn khá mới tại VN nhưng đã được áp dụng từ lâu ở những nước phát triển.",
-            "id": "15"
-        },
-        {
-            "createdAt": "2022-01-15T04:39:49.775Z",
-            "title": "Tổng hợp những điều bạn cần biết về thực phẩm organic",
-            "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/index_news_4.jpg",
-            "desc": "Thực phẩm hữu cơ  thực phẩm organic xuất hiện trong thời gian gần đây như là cứu cánh của nhiều bà nội trợ Việt Nam. ",
-            "id": "16"
-        }
-    ],
-    "products": [{
-            "id": "55",
-            "title": "Bơ sáp 034 Lâm Đồng hướng hữu cơ 1kg",
-            "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810165/pjmg52aq/mapvya4dshzjm8errie3.jpg",
-            "price": "135000",
-            "status": "còn hàng",
-            "desc": "Bơ sáp nhập khẩu từ Lâm Đồng tươi ngon",
-            "category": "1"
-        },
-        {
-            "id": "lk_pk_I",
-            "title": "Bưởi da xanh hướng hữu cơ 1kg",
-            "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810266/pjmg52aq/smtdk8hkrtb8g4xb9ii5.jpg",
-            "price": "75000",
-            "status": "Còn hàng",
-            "desc": "",
-            "category": "1"
-        },
-        {
-            "id": "1SuMcxh",
-            "title": "Cá Basa cắt lát hữu cơ Binca hộp 270g",
-            "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810308/pjmg52aq/rd0nu4ddekbjv0okmpzt.jpg",
-            "price": "75000",
-            "status": "còn hàng",
-            "desc": "khong mo ta",
-            "category": "2"
-        },
-        {
-            "title": "Cá Trác vàng biển Ích Hữu 400g",
-            "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810485/pjmg52aq/xfox4ly5a6hvw1sbebkf.jpg",
-            "price": "71500",
-            "status": "còn hàng",
-            "desc": "khong mo ta",
-            "id": "hu1wMzJ",
-            "category": "2"
-        },
-        {
-            "title": "Cải bó xôi hữu cơ (Rau chân vịt) 350g",
-            "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810522/pjmg52aq/d98j7znpxgu51ewvrp5c.jpg",
-            "price": "29000",
-            "status": "còn hàng",
-            "desc": "khong mo ta",
-            "id": "KGPu23f",
-            "category": "3"
-        },
-        {
-            "title": "Cam xoàn hướng hữu cơ 1kg",
-            "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810553/pjmg52aq/bukbxwomhuwhc7akmb5b.jpg",
-            "price": "65000",
-            "status": "còn hàng",
-            "desc": "khong mo ta",
-            "id": "WIZBMdi",
-            "category": "1"
-        },
-        {
-            "title": "Gà ta thả vườn Bình Định 1kg",
-            "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810584/pjmg52aq/c4lir8qlyz1jeko4rtvc.jpg",
-            "price": "200000",
-            "status": "còn hàng",
-            "desc": "khong mo ta",
-            "id": "uH-HqrI",
-            "category": "4"
-        },
-        {
-            "title": "Sầu riêng Ri6 sạch 1kg",
-            "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810624/pjmg52aq/jdbxkdfdlf6ipy2cfbgk.jpg",
-            "price": "235000",
-            "status": "còn hàng",
-            "desc": "khong mo ta",
-            "id": "i0oT5EB",
-            "category": "1"
-        },
-        {
-            "title": "Thanh long sạch Bình Thuận 1kg",
-            "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810643/pjmg52aq/lfq8htddpcdezrdtjcbv.jpg",
-            "price": "45000",
-            "status": "còn hàng",
-            "desc": "khong mo ta",
-            "id": "NvhPBT4",
-            "category": "1"
-        },
-        {
-            "title": "Thịt nạc đùi heo hữu cơ 400g Thịt nạc đùi heo hữu cơ 400g",
-            "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810669/pjmg52aq/se11nyccazbtfi9hu6uv.png",
-            "price": "84000",
-            "status": "còn hàng",
-            "desc": "khong mo ta",
-            "id": "WQYD3y-",
-            "category": "4"
-        },
-        {
-            "title": "Tôm sú hữu cơ Binca size đặc biệt XL hộp 250g",
-            "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810690/pjmg52aq/sbkn8edzbylgij70iqxq.jpg",
-            "price": "181000",
-            "status": "còn hàng",
-            "desc": "khong mo ta",
-            "id": "DatMuoD",
-            "category": "2"
-        },
-        {
-            "title": "Xoài cát Hòa Lộc Global GAP loại đặc biệt",
-            "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810717/pjmg52aq/sluinsuufgb2rcyakawn.jpg",
-            "price": "140000",
-            "status": "còn hàng",
-            "desc": "khong mo ta",
-            "id": "5ZmZUWS",
-            "category": "1"
-        }
-    ],
-    "users": [{
-            "email": "dinhlcph18273@fpt.edu.vn",
-            "password": "$2a$10$faujkeQjzj0SwJDyuImvJu3b8a29/CRX7pspGEI/NCxBC8w9u7bu.",
-            "username": "dinh2810",
-            "id": 1
-        },
-        {
-            "email": "dinhlcph18273@fpt.edu.vnd",
-            "password": "$2a$10$dNkqi/Sr4fCuHkYDm/b6j.awX3xfBReTIBJ9eUo2GPZpVe3MP/kci",
-            "username": "ledinh",
-            "id": 2
-        },
-        {
-            "email": "hobao3210@gmail.com",
-            "password": "$2a$10$vEFnZNA9h544K12uFRDXNONoAlosHXvy19tnQSrQJl1hlr6p7adH2",
-            "username": "dinhle",
-            "id": 3
-        },
-        {
-            "email": "thamam195@gmail.com",
-            "password": "$2a$10$9kHyzyzH60o44psEnbITT.SB8UB2/J3CDyaBojtwSSwe6.SNA2hTm",
-            "username": "dinhlc",
-            "id": 4
-        }
-    ],
-    "comments": [],
-    "profile": {
-        "name": "typicode"
+  "posts": [
+    {
+      "id": "8",
+      "title": "Công ty Thực Phẩm Tâm Minh",
+      "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/logo-1.png",
+      "desc": "Công ty TNHH Thực phẩm Tâm Minh có sản xuất Bột nêm Ngưu ...."
+    },
+    {
+      "createdAt": "2022-01-15T02:36:13.715Z",
+      "title": "Công Ty Thiên Nhiên Việt",
+      "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/viet_nature_logotype_color_on_white2.png",
+      "desc": "Công ty TNHH Xuất Nhập Khẩu Thiên Nhiên Việt chuyên về sản ...",
+      "id": "9"
+    },
+    {
+      "createdAt": "2022-01-14T12:38:27.738Z",
+      "title": "Binca Việt Nam",
+      "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/binca-vietnam-logo_large.png",
+      "desc": "Chính thức bước vào thị trường Việt Nam vào năm 1998, sau ...",
+      "id": "10"
+    },
+    {
+      "createdAt": "2022-01-14T17:58:26.446Z",
+      "title": "Antofu Việt Nam",
+      "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/upload_2a9f0c359ba448c785490ea0c0ed3dc0_large.jpg",
+      "desc": "Antofu Việt Nam là công ty được đầu tư với 100% nguồn vốn ...",
+      "id": "11"
+    },
+    {
+      "createdAt": "2022-01-15T02:21:11.908Z",
+      "title": "Làm thế nào để được chứng nhận hữu cơ ở Việt Nam?",
+      "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/index_news_1.png",
+      "desc": "Chứng nhận hữu cơ là một tiêu chuẩn góp phần đảm bảo tính giá trị cho các sản phẩm hữu cơ.",
+      "id": "13"
+    },
+    {
+      "createdAt": "2022-01-14T11:14:02.843Z",
+      "title": "Giải đáp : Thực phẩm hữu cơ Organic là gì ?",
+      "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/index_news_2.jpg",
+      "desc": "Thực phẩm organic hay còn gọi là thực phẩm hữu cơ đang ngày một phổ biến và tạo một cơn sốt trên thị trường hiện nay.",
+      "id": "14"
+    },
+    {
+      "createdAt": "2022-01-15T00:11:58.958Z",
+      "title": "Nông nghiệp hữu cơ và thực trạng chứng nhận tại Việt Nam",
+      "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/index_news_3.jpg",
+      "desc": "Là một mô hình nông nghiệp còn khá mới tại VN nhưng đã được áp dụng từ lâu ở những nước phát triển.",
+      "id": "15"
+    },
+    {
+      "createdAt": "2022-01-15T04:39:49.775Z",
+      "title": "Tổng hợp những điều bạn cần biết về thực phẩm organic",
+      "img": "http://mauweb.monamedia.net/happytrade/wp-content/uploads/2019/05/index_news_4.jpg",
+      "desc": "Thực phẩm hữu cơ  thực phẩm organic xuất hiện trong thời gian gần đây như là cứu cánh của nhiều bà nội trợ Việt Nam. ",
+      "id": "16"
     }
+  ],
+  "products": [
+    {
+      "id": "55",
+      "title": "Bơ sáp 034 Lâm Đồng hướng hữu cơ 1kg",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810165/pjmg52aq/mapvya4dshzjm8errie3.jpg",
+      "price": "135000",
+      "status": "còn hàng",
+      "desc": "Bơ sáp nhập khẩu từ Lâm Đồng tươi ngon",
+      "category": "1"
+    },
+    {
+      "id": "lk_pk_I",
+      "title": "Bưởi da xanh hướng hữu cơ 1kg",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810266/pjmg52aq/smtdk8hkrtb8g4xb9ii5.jpg",
+      "price": "75000",
+      "status": "Còn hàng",
+      "desc": "",
+      "category": "1"
+    },
+    {
+      "id": "1SuMcxh",
+      "title": "Cá Basa cắt lát hữu cơ Binca hộp 270g",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810308/pjmg52aq/rd0nu4ddekbjv0okmpzt.jpg",
+      "price": "75000",
+      "status": "còn hàng",
+      "desc": "khong mo ta",
+      "category": "2"
+    },
+    {
+      "title": "Cá Trác vàng biển Ích Hữu 400g",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810485/pjmg52aq/xfox4ly5a6hvw1sbebkf.jpg",
+      "price": "71500",
+      "status": "còn hàng",
+      "desc": "khong mo ta",
+      "id": "hu1wMzJ",
+      "category": "2"
+    },
+    {
+      "title": "Cải bó xôi hữu cơ (Rau chân vịt) 350g",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810522/pjmg52aq/d98j7znpxgu51ewvrp5c.jpg",
+      "price": "29000",
+      "status": "còn hàng",
+      "desc": "khong mo ta",
+      "id": "KGPu23f",
+      "category": "3"
+    },
+    {
+      "title": "Cam xoàn hướng hữu cơ 1kg",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810553/pjmg52aq/bukbxwomhuwhc7akmb5b.jpg",
+      "price": "65000",
+      "status": "còn hàng",
+      "desc": "khong mo ta",
+      "id": "WIZBMdi",
+      "category": "1"
+    },
+    {
+      "title": "Gà ta thả vườn Bình Định 1kg",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810584/pjmg52aq/c4lir8qlyz1jeko4rtvc.jpg",
+      "price": "200000",
+      "status": "còn hàng",
+      "desc": "khong mo ta",
+      "id": "uH-HqrI",
+      "category": "4"
+    },
+    {
+      "title": "Sầu riêng Ri6 sạch 1kg",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810624/pjmg52aq/jdbxkdfdlf6ipy2cfbgk.jpg",
+      "price": "235000",
+      "status": "còn hàng",
+      "desc": "khong mo ta",
+      "id": "i0oT5EB",
+      "category": "1"
+    },
+    {
+      "title": "Thanh long sạch Bình Thuận 1kg",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810643/pjmg52aq/lfq8htddpcdezrdtjcbv.jpg",
+      "price": "45000",
+      "status": "còn hàng",
+      "desc": "khong mo ta",
+      "id": "NvhPBT4",
+      "category": "1"
+    },
+    {
+      "title": "Thịt nạc đùi heo hữu cơ 400g Thịt nạc đùi heo hữu cơ 400g",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810669/pjmg52aq/se11nyccazbtfi9hu6uv.png",
+      "price": "84000",
+      "status": "còn hàng",
+      "desc": "khong mo ta",
+      "id": "WQYD3y-",
+      "category": "4"
+    },
+    {
+      "title": "Tôm sú hữu cơ Binca size đặc biệt XL hộp 250g",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810690/pjmg52aq/sbkn8edzbylgij70iqxq.jpg",
+      "price": "181000",
+      "status": "còn hàng",
+      "desc": "khong mo ta",
+      "id": "DatMuoD",
+      "category": "2"
+    },
+    {
+      "title": "Xoài cát Hòa Lộc Global GAP loại đặc biệt",
+      "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810717/pjmg52aq/sluinsuufgb2rcyakawn.jpg",
+      "price": "140000",
+      "status": "còn hàng",
+      "desc": "khong mo ta",
+      "id": "5ZmZUWS",
+      "category": "1"
+    }
+  ],
+  "users": [
+    {
+      "email": "dinhlcph18273@fpt.edu.vn",
+      "password": "$2a$10$faujkeQjzj0SwJDyuImvJu3b8a29/CRX7pspGEI/NCxBC8w9u7bu.",
+      "username": "Lê Công Định",
+      "id": 1
+    },
+    {
+      "email": "dinhlcph18273@fpt.edu.vnd",
+      "password": "$2a$10$dNkqi/Sr4fCuHkYDm/b6j.awX3xfBReTIBJ9eUo2GPZpVe3MP/kci",
+      "username": "ledinh",
+      "id": 2
+    },
+    {
+      "email": "hobao3210@gmail.com",
+      "password": "$2a$10$vEFnZNA9h544K12uFRDXNONoAlosHXvy19tnQSrQJl1hlr6p7adH2",
+      "username": "dinhle",
+      "id": 3
+    },
+    {
+      "email": "thamam195@gmail.com",
+      "password": "$2a$10$9kHyzyzH60o44psEnbITT.SB8UB2/J3CDyaBojtwSSwe6.SNA2hTm",
+      "username": "dinhlc",
+      "id": 4
+    }
+  ],
+  "order": [
+    {
+      "products": [
+        {
+          "title": "Cam xoàn hướng hữu cơ 1kg",
+          "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810553/pjmg52aq/bukbxwomhuwhc7akmb5b.jpg",
+          "price": "65000",
+          "status": "còn hàng",
+          "desc": "khong mo ta",
+          "id": "WIZBMdi",
+          "category": "1",
+          "quantity": 1,
+          "user": 1
+        },
+        {
+          "title": "Cải bó xôi hữu cơ (Rau chân vịt) 350g",
+          "img": "http://res.cloudinary.com/dinhlcph18273/image/upload/v1644810522/pjmg52aq/d98j7znpxgu51ewvrp5c.jpg",
+          "price": "29000",
+          "status": "còn hàng",
+          "desc": "khong mo ta",
+          "id": "KGPu23f",
+          "category": "3",
+          "quantity": 1,
+          "user": 1
+        }
+      ],
+      "information": {
+        "name": "lê định",
+        "address": "12121",
+        "phone": "0372011308",
+        "email": "dinhlcph18273@fpt.edu.vn",
+        "note": "11212121212"
+      },
+      "status": 1,
+      "total": 94000,
+      "id": 1
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
 }
