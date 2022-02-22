@@ -28,8 +28,8 @@ const detailCart = {
                     ${header.print()}
                 </div>
             </header>
-        <div class="max-w-7xl mx-auto py-10 grid grid-cols-2">
-            <div>
+        <div class="max-w-7xl mx-auto py-10 grid grid-cols-2 gap-8">
+            <div class="">
             ${localStorage.getItem("cart") ? `
                 <table>
                         <thead>
@@ -56,14 +56,28 @@ const detailCart = {
                     </tbody>
                     `).join(" ")}
                     </table>
-                    <tr class=" text-center">
-                            <td class="text-center"><h2 class="text-right pr-12 text-xl">Total: ${getTotalPrice()}đ</h2></td>
-                    </tr>
             ` : `
                 <h1 class="text-center text-3xl text-red-500">Giỏ hàng Trống!</h1>
             `}
             </div>
-            <div>
+            <div class="pl-10 border-l">
+                <table class="max-w-full">
+                    <thead class="border-b-4">
+                        <th class="text-lg">Tổng số lượng</th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td >
+                                Tổng Phụ
+                            </td>
+                            <td class="py-5">
+                                <h2 class="pl-[280px] text-lime-500">Total: ${getTotalPrice()} đ</h2>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
 
             </div>
         </div>
