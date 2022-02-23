@@ -1,4 +1,5 @@
 import $ from "jquery";
+import emailjs, { init } from "@emailjs/browser";
 import toastr from "toastr";
 import footer from "../../components/footer";
 import header from "../../components/header";
@@ -8,6 +9,8 @@ import "toastr/build/toastr.min.css";
 // eslint-disable-next-line import/order
 import validate from "jquery-validation";
 import { addorder } from "../../aip/order";
+
+init("user_BVA4LDJtLGzwKjk6uQZnR");
 
 const checkout = {
         print() {
@@ -154,11 +157,25 @@ const checkout = {
                         total: +document.querySelector("#total").innerHTML,
                     };
                     try {
+                        const reponse = await emailjs.send("service_k9lmbx9", "template_57nssvj", {
+                            to_name: document.querySelector("#name1").value,
+                            message: `Bạn có 1 đơn hàng mới từ Định! bao gồm:
+                                ${cart.map((item) => `
+                                    ${item.title}
+                                `).join("")}
+                                Tổng giá là: ${getTotalPrice()}đ
+                            `,
+                            email_kh: document.querySelector("#email").value,
+                            reply_to: "dinhlcph18273@fpt.edu.vn",
+                        });
+                        if (reponse) {
+                            alert("Vui lòng chechk email");
+                        }
                         const response = await addorder(data);
                         toastr.success("Đặt hàng thành công");
                         cart = cart.filter((item) => item.user !== user.id);
                         localStorage.setItem("cart", JSON.stringify(cart));
-                        window.location.href = "/#";
+                        window.location.href = "/#/listorder";
                     } catch (error) {
                         toastr.error("Đặt hàng thất bại");
                     }

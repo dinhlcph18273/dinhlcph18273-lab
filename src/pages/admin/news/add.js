@@ -123,10 +123,6 @@ const addPost = {
                 addPostForm();
             },
         });
-
-        // formAdd.addEventListener("submit", async(e) => {
-        //     e.preventDefault();
-        // });
     },
 };
 
